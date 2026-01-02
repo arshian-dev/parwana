@@ -129,25 +129,42 @@ function renderVisualizer() {
   if (!container) return;
 
   if (!currentConcept.visualization_links || currentConcept.visualization_links.length === 0) {
-    return; // Don't show empties
+    return;
   }
 
   const viz = currentConcept.visualization_links[0];
   container.innerHTML = `
     <div class="section">
       <div class="section__header"><h2 class="section__title">Interactive Visualizer</h2></div>
-      <div class="visualizer-card-wrapper">
-        <a href="${viz.url}" target="_blank" rel="noopener noreferrer" class="visualizer-launch-card">
-          <div class="visualizer-launch-icon">🎮</div>
-          <div class="visualizer-launch-content">
-            <h3>Launch ${viz.title}</h3>
-            <p>Open the interactive visualizer in a new tab to start learning.</p>
-          </div>
-          <div class="visualizer-launch-arrow">→</div>
-        </a>
+      
+      <div id="viz-wrapper" class="visualizer-wrapper">
+        <button id="load-viz-btn" class="btn-primary btn-large">
+          <span class="icon">🎮</span>
+          Load Interactive Visualizer
+        </button>
+        <p class="visualizer-note">Click to load the interactive tool. Works best on desktop.</p>
+        <a href="${viz.url}" target="_blank" class="visualizer-fallback-link">Or open in new tab ↗</a>
       </div>
     </div>
   `;
+
+  document.getElementById('load-viz-btn').addEventListener('click', function () {
+    const wrapper = document.getElementById('viz-wrapper');
+    wrapper.innerHTML = `
+      <div class="visualizer-container-large">
+        <div class="visualizer-toolbar">
+          <a href="${viz.url}" target="_blank" class="btn-text">Open in New Tab ↗</a>
+          <button class="btn-text" onclick="window.location.reload()">Reload Page</button>
+        </div>
+        <iframe 
+          src="${viz.url}" 
+          class="visualizer-iframe-large" 
+          title="${viz.title}" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    `;
+  });
 }
 
 function renderNotes() {
