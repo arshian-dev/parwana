@@ -128,11 +128,7 @@ function renderVisualizer() {
   const container = document.getElementById('visualizer-section');
   if (!container) return;
 
-  if (!currentConcept.visualization_links || currentConcept.visualization_links.length === 0) {
-    return;
-  }
-
-  const viz = currentConcept.visualization_links[0];
+  // Show wrapper for all concepts
   container.innerHTML = `
     <div class="section">
       <div class="section__header"><h2 class="section__title">Interactive Visualizer</h2></div>
@@ -140,30 +136,26 @@ function renderVisualizer() {
       <div id="viz-wrapper" class="visualizer-wrapper">
         <button id="load-viz-btn" class="btn-primary btn-large">
           <span class="icon">🎮</span>
-          Load Interactive Visualizer
+          Load Custom Visualizer
         </button>
-        <p class="visualizer-note">Click to load the interactive tool. Works best on desktop.</p>
-        <a href="${viz.url}" target="_blank" class="visualizer-fallback-link">Or open in new tab ↗</a>
+        <p class="visualizer-note">Click to load the interactive tool.</p>
+        
+        <!-- Optional fallback link if external exists -->
+        ${currentConcept.visualization_links?.[0] ?
+      `<a href="${currentConcept.visualization_links[0].url}" target="_blank" class="visualizer-fallback-link">Or try external visualizer ↗</a>`
+      : ''}
       </div>
     </div>
   `;
 
   document.getElementById('load-viz-btn').addEventListener('click', function () {
     const wrapper = document.getElementById('viz-wrapper');
-    wrapper.innerHTML = `
-      <div class="visualizer-container-large">
-        <div class="visualizer-toolbar">
-          <a href="${viz.url}" target="_blank" class="btn-text">Open in New Tab ↗</a>
-          <button class="btn-text" onclick="window.location.reload()">Reload Page</button>
-        </div>
-        <iframe 
-          src="${viz.url}" 
-          class="visualizer-iframe-large" 
-          title="${viz.title}" 
-          allowfullscreen>
-        </iframe>
-      </div>
-    `;
+    // Clear wrapper and setting up for VisualizerEngine
+    wrapper.innerHTML = `<div id="viz-container"></div>`;
+
+    // Initialize the engine
+    const engine = new VisualizerEngine('viz-container');
+    engine.render(currentConcept.id);
   });
 }
 
