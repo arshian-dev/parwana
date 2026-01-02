@@ -1,0 +1,273 @@
+[
+  {
+    "id": "arrays",
+    "name": "Arrays",
+    "description": "Contiguous memory data structure with O(1) random access. Foundation for most data structures.",
+    "prerequisites": [],
+    "explanation_links": [
+      {"title": "Arrays - CS50", "url": "https://www.youtube.com/watch?v=YdSycMcxvY0"},
+      {"title": "Array Data Structure - GeeksforGeeks", "url": "https://www.geeksforgeeks.org/array-data-structure/"}
+    ],
+    "visualization_links": [
+      {"title": "Array Visualization", "url": "https://www.cs.usfca.edu/~galles/visualization/Algorithms.html"}
+    ],
+    "reference_links": [
+      {"title": "Arrays - MDN Web Docs", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"},
+      {"title": "Array Problems - LeetCode", "url": "https://leetcode.com/tag/array/"}
+    ]
+  },
+  {
+    "id": "strings",
+    "name": "Strings",
+    "description": "Sequence of characters. Essential for text processing and pattern matching algorithms.",
+    "prerequisites": ["arrays"],
+    "explanation_links": [
+      {"title": "Strings in Programming", "url": "https://www.youtube.com/watch?v=TkTgo_7ab0I"},
+      {"title": "String Data Structure - GeeksforGeeks", "url": "https://www.geeksforgeeks.org/string-data-structure/"}
+    ],
+    "visualization_links": [],
+    "reference_links": [
+      {"title": "String - MDN", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"},
+      {"title": "String Problems - LeetCode", "url": "https://leetcode.com/tag/string/"}
+    ]
+  },
+  {
+    "id": "linked-list",
+    "name": "Linked Lists",
+    "description": "Linear data structure with nodes connected via pointers. Enables efficient insertions and deletions.",
+    "prerequisites": ["arrays"],
+    "explanation_links": [
+      {"title": "Linked Lists - CS50", "url": "https://www.youtube.com/watch?v=zQI3FyWm144"},
+      {"title": "Introduction to Linked List", "url": "https://www.geeksforgeeks.org/introduction-to-linked-list-data-structure-and-algorithm-tutorial/"}
+    ],
+    "visualization_links": [
+      {"title": "Linked List Visualization", "url": "https://visualgo.net/en/list"}
+    ],
+    "reference_links": [
+      {"title": "Linked List - GeeksforGeeks", "url": "https://www.geeksforgeeks.org/data-structures/linked-list/"},
+      {"title": "Linked List Problems - LeetCode", "url": "https://leetcode.com/tag/linked-list/"}
+    ]
+  },
+  {
+    "id": "stacks",
+    "name": "Stacks",
+    "description": "LIFO (Last In First Out) data structure. Used for function calls, undo operations, and expression parsing.",
+    "prerequisites": ["arrays", "linked-list"],
+    "explanation_links": [
+      {"title": "Stacks - CS50", "url": "https://www.youtube.com/watch?v=hVsNqhEthOk"},
+      {"title": "Stack Data Structure - GeeksforGeeks", "url": "https://www.geeksforgeeks.org/stack-data-structure/"}
+    ],
+    "visualization_links": [
+      {"title": "Stack Visualization", "url": "https://www.cs.usfca.edu/~galles/visualization/StackArray.html"}
+    ],
+    "reference_links": [
+      {"title": "Stack Problems - LeetCode", "url": "https://leetcode.com/tag/stack/"}
+    ]
+  },
+  {
+    "id": "queues",
+    "name": "Queues",
+    "description": "FIFO (First In First Out) data structure. Used for scheduling, BFS, and buffer management.",
+    "prerequisites": ["arrays", "linked-list"],
+    "explanation_links": [
+      {"title": "Queues - CS50", "url": "https://www.youtube.com/watch?v=D6gu-_tmEpQ"},
+      {"title": "Queue Data Structure - GeeksforGeeks", "url": "https://www.geeksforgeeks.org/queue-data-structure/"}
+    ],
+    "visualization_links": [
+      {"title": "Queue Visualization", "url": "https://www.cs.usfca.edu/~galles/visualization/QueueArray.html"}
+    ],
+    "reference_links": [
+      {"title": "Queue Problems - LeetCode", "url": "https://leetcode.com/tag/queue/"}
+    ]
+  },
+  {
+    "id": "hash-tables",
+    "name": "Hash Tables",
+    "description": "Key-value data structure with O(1) average lookup. Foundation for dictionaries and sets.",
+    "prerequisites": ["arrays"],
+    "explanation_links": [
+      {"title": "Hash Tables - CS50", "url": "https://www.youtube.com/watch?v=nvzVHwrrub0"},
+      {"title": "Hashing - GeeksforGeeks", "url": "https://www.geeksforgeeks.org/hashing-data-structure/"}
+    ],
+    "visualization_links": [
+      {"title": "Hash Table Visualization", "url": "https://www.cs.usfca.edu/~galles/visualization/OpenHash.html"}
+    ],
+    "reference_links": [
+      {"title": "Hash Table Problems - LeetCode", "url": "https://leetcode.com/tag/hash-table/"}
+    ]
+  },
+  {
+    "id": "recursion",
+    "name": "Recursion",
+    "description": "Problem-solving technique where a function calls itself. Essential for trees, graphs, and divide-and-conquer.",
+    "prerequisites": ["arrays"],
+    "explanation_links": [
+      {"title": "Recursion - CS50", "url": "https://www.youtube.com/watch?v=mz6tAJMVmfM"},
+      {"title": "Introduction to Recursion - GeeksforGeeks", "url": "https://www.geeksforgeeks.org/introduction-to-recursion-data-structure-and-algorithm-tutorials/"}
+    ],
+    "visualization_links": [
+      {"title": "Recursion Visualization", "url": "https://recursion.vercel.app/"}
+    ],
+    "reference_links": [
+      {"title": "Recursion Problems - LeetCode", "url": "https://leetcode.com/tag/recursion/"}
+    ]
+  },
+  {
+    "id": "sorting",
+    "name": "Sorting Algorithms",
+    "description": "Algorithms to arrange elements in order. Includes Bubble, Selection, Merge, Quick, and Heap sort.",
+    "prerequisites": ["arrays", "recursion"],
+    "explanation_links": [
+      {"title": "Sorting Algorithms - Visualization", "url": "https://www.youtube.com/watch?v=kPRA0W1kECg"},
+      {"title": "Sorting Algorithms - GeeksforGeeks", "url": "https://www.geeksforgeeks.org/sorting-algorithms/"}
+    ],
+    "visualization_links": [
+      {"title": "Sorting Visualization", "url": "https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html"}
+    ],
+    "reference_links": [
+      {"title": "Sorting Problems - LeetCode", "url": "https://leetcode.com/tag/sorting/"}
+    ]
+  },
+  {
+    "id": "searching",
+    "name": "Searching Algorithms",
+    "description": "Algorithms to find elements. Linear search O(n) and Binary search O(log n) on sorted data.",
+    "prerequisites": ["arrays", "sorting"],
+    "explanation_links": [
+      {"title": "Binary Search - CS50", "url": "https://www.youtube.com/watch?v=T98PIp4omUA"},
+      {"title": "Searching Algorithms - GeeksforGeeks", "url": "https://www.geeksforgeeks.org/searching-algorithms/"}
+    ],
+    "visualization_links": [
+      {"title": "Binary Search Visualization", "url": "https://www.cs.usfca.edu/~galles/visualization/Search.html"}
+    ],
+    "reference_links": [
+      {"title": "Binary Search Problems - LeetCode", "url": "https://leetcode.com/tag/binary-search/"}
+    ]
+  },
+  {
+    "id": "binary-trees",
+    "name": "Binary Trees",
+    "description": "Hierarchical data structure where each node has at most two children. Foundation for BST, heaps, and more.",
+    "prerequisites": ["recursion", "linked-list"],
+    "explanation_links": [
+      {"title": "Binary Trees - CS50", "url": "https://www.youtube.com/watch?v=mtvbVLK5xDQ"},
+      {"title": "Binary Tree - GeeksforGeeks", "url": "https://www.geeksforgeeks.org/binary-tree-data-structure/"}
+    ],
+    "visualization_links": [
+      {"title": "Binary Tree Visualization", "url": "https://visualgo.net/en/bst"}
+    ],
+    "reference_links": [
+      {"title": "Tree Problems - LeetCode", "url": "https://leetcode.com/tag/tree/"}
+    ]
+  },
+  {
+    "id": "binary-search-trees",
+    "name": "Binary Search Trees",
+    "description": "Binary tree with ordering property. Left child < parent < right child. Enables O(log n) operations.",
+    "prerequisites": ["binary-trees", "searching"],
+    "explanation_links": [
+      {"title": "BST Explained", "url": "https://www.youtube.com/watch?v=pYT9F8_LFTM"},
+      {"title": "BST - GeeksforGeeks", "url": "https://www.geeksforgeeks.org/binary-search-tree-data-structure/"}
+    ],
+    "visualization_links": [
+      {"title": "BST Visualization", "url": "https://www.cs.usfca.edu/~galles/visualization/BST.html"}
+    ],
+    "reference_links": [
+      {"title": "BST Problems - LeetCode", "url": "https://leetcode.com/tag/binary-search-tree/"}
+    ]
+  },
+  {
+    "id": "heaps",
+    "name": "Heaps & Priority Queues",
+    "description": "Complete binary tree with heap property. Used for priority queues, heap sort, and scheduling.",
+    "prerequisites": ["binary-trees", "arrays"],
+    "explanation_links": [
+      {"title": "Heaps Explained", "url": "https://www.youtube.com/watch?v=t0Cq6tVNRBA"},
+      {"title": "Heap Data Structure - GeeksforGeeks", "url": "https://www.geeksforgeeks.org/heap-data-structure/"}
+    ],
+    "visualization_links": [
+      {"title": "Heap Visualization", "url": "https://www.cs.usfca.edu/~galles/visualization/Heap.html"}
+    ],
+    "reference_links": [
+      {"title": "Heap Problems - LeetCode", "url": "https://leetcode.com/tag/heap-priority-queue/"}
+    ]
+  },
+  {
+    "id": "graphs",
+    "name": "Graphs",
+    "description": "Non-linear data structure with vertices and edges. Models networks, social connections, and maps.",
+    "prerequisites": ["linked-list", "hash-tables"],
+    "explanation_links": [
+      {"title": "Graphs - CS50", "url": "https://www.youtube.com/watch?v=AfSk24UTFS8"},
+      {"title": "Graph Data Structure - GeeksforGeeks", "url": "https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/"}
+    ],
+    "visualization_links": [
+      {"title": "Graph Visualization", "url": "https://visualgo.net/en/graphds"}
+    ],
+    "reference_links": [
+      {"title": "Graph Problems - LeetCode", "url": "https://leetcode.com/tag/graph/"}
+    ]
+  },
+  {
+    "id": "bfs-dfs",
+    "name": "BFS & DFS",
+    "description": "Graph traversal algorithms. BFS for shortest path (unweighted), DFS for exhaustive search and backtracking.",
+    "prerequisites": ["graphs", "queues", "stacks", "recursion"],
+    "explanation_links": [
+      {"title": "BFS & DFS Explained", "url": "https://www.youtube.com/watch?v=TIbUeeksXcI"},
+      {"title": "BFS - GeeksforGeeks", "url": "https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/"},
+      {"title": "DFS - GeeksforGeeks", "url": "https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/"}
+    ],
+    "visualization_links": [
+      {"title": "BFS/DFS Visualization", "url": "https://visualgo.net/en/dfsbfs"}
+    ],
+    "reference_links": [
+      {"title": "BFS Problems - LeetCode", "url": "https://leetcode.com/tag/breadth-first-search/"},
+      {"title": "DFS Problems - LeetCode", "url": "https://leetcode.com/tag/depth-first-search/"}
+    ]
+  },
+  {
+    "id": "dynamic-programming",
+    "name": "Dynamic Programming",
+    "description": "Optimization technique using memoization/tabulation. Solves problems with overlapping subproblems.",
+    "prerequisites": ["recursion", "arrays"],
+    "explanation_links": [
+      {"title": "Dynamic Programming - MIT", "url": "https://www.youtube.com/watch?v=OQ5jsbhAv_M"},
+      {"title": "DP - GeeksforGeeks", "url": "https://www.geeksforgeeks.org/dynamic-programming/"}
+    ],
+    "visualization_links": [],
+    "reference_links": [
+      {"title": "DP Problems - LeetCode", "url": "https://leetcode.com/tag/dynamic-programming/"}
+    ]
+  },
+  {
+    "id": "greedy",
+    "name": "Greedy Algorithms",
+    "description": "Makes locally optimal choices at each step. Used for activity selection, Huffman coding, and more.",
+    "prerequisites": ["sorting", "arrays"],
+    "explanation_links": [
+      {"title": "Greedy Algorithms Explained", "url": "https://www.youtube.com/watch?v=bC7o8P_Ste4"},
+      {"title": "Greedy Algorithms - GeeksforGeeks", "url": "https://www.geeksforgeeks.org/greedy-algorithms/"}
+    ],
+    "visualization_links": [],
+    "reference_links": [
+      {"title": "Greedy Problems - LeetCode", "url": "https://leetcode.com/tag/greedy/"}
+    ]
+  },
+  {
+    "id": "backtracking",
+    "name": "Backtracking",
+    "description": "Algorithmic technique for solving constraint satisfaction problems. Explores all possibilities systematically.",
+    "prerequisites": ["recursion", "bfs-dfs"],
+    "explanation_links": [
+      {"title": "Backtracking Explained", "url": "https://www.youtube.com/watch?v=DKCbsiDBN6c"},
+      {"title": "Backtracking - GeeksforGeeks", "url": "https://www.geeksforgeeks.org/backtracking-algorithms/"}
+    ],
+    "visualization_links": [
+      {"title": "N-Queens Visualization", "url": "https://www.cs.usfca.edu/~galles/visualization/RecQueens.html"}
+    ],
+    "reference_links": [
+      {"title": "Backtracking Problems - LeetCode", "url": "https://leetcode.com/tag/backtracking/"}
+    ]
+  }
+]
