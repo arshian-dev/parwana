@@ -1,6 +1,10 @@
 # CS Learning Hub – DSA Edition
-
-A concept-centric, static learning platform for Data Structures & Algorithms. This project centralizes resources, tracks your progress, and stores your personal notes locally in your browser.
+## Features
+- **Concept Maps**: Step-by-step learning path.
+- **Custom Visualizer Engine**: Built-in interactive simulators for Arrays, Lists, Stacks, Queues, and Sorting.
+- **Progress Tracking**: LocalStorage-based status (New, Learning, Mastered).
+- **Resources**: Curated videos and articles for each topic.
+- **Personal Notes**: Auto-saving note-taking for every concept.
 
 ![Preview](preview.png)
 *(Note: Add a screenshot here if you like!)*
