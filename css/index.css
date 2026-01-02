@@ -723,6 +723,63 @@ a:hover {
     border-top: 1px solid var(--border-color);
 }
 
+/* Visualizer Launch Card */
+.visualizer-launch-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    padding: var(--space-xl);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-lg);
+    color: var(--text-primary);
+    transition: all var(--transition-normal);
+    text-decoration: none;
+}
+
+.visualizer-launch-card:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--accent-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.visualizer-launch-icon {
+    font-size: 3rem;
+    background: rgba(99, 102, 241, 0.1);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.visualizer-launch-content {
+    flex: 1;
+}
+
+.visualizer-launch-content h3 {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    margin-bottom: var(--space-xs);
+}
+
+.visualizer-launch-content p {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.visualizer-launch-arrow {
+    font-size: 2rem;
+    color: var(--accent-primary);
+    transition: transform var(--transition-fast);
+}
+
+.visualizer-launch-card:hover .visualizer-launch-arrow {
+    transform: translateX(4px);
+}
+
 @media (max-width: 480px) {
     .header {
         padding: var(--space-lg) 0;
@@ -738,5 +795,11 @@ a:hover {
 
     .video-grid {
         grid-template-columns: 1fr;
+    }
+
+    .visualizer-launch-card {
+        flex-direction: column;
+        text-align: center;
+        padding: var(--space-lg);
     }
 }

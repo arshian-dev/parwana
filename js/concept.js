@@ -128,7 +128,7 @@ function renderVisualizer() {
   const container = document.getElementById('visualizer-section');
   if (!container) return;
 
-  if (currentConcept.visualization_links.length === 0) {
+  if (!currentConcept.visualization_links || currentConcept.visualization_links.length === 0) {
     return; // Don't show empties
   }
 
@@ -136,11 +136,15 @@ function renderVisualizer() {
   container.innerHTML = `
     <div class="section">
       <div class="section__header"><h2 class="section__title">Interactive Visualizer</h2></div>
-      <div class="visualizer-container">
-        <iframe src="${viz.url}" class="visualizer-iframe" title="${viz.title}" loading="lazy"></iframe>
-        <div class="visualizer-fallback">
-          <p>If the visualizer doesn't load, <a href="${viz.url}" target="_blank">open it in a new tab</a>.</p>
-        </div>
+      <div class="visualizer-card-wrapper">
+        <a href="${viz.url}" target="_blank" rel="noopener noreferrer" class="visualizer-launch-card">
+          <div class="visualizer-launch-icon">🎮</div>
+          <div class="visualizer-launch-content">
+            <h3>Launch ${viz.title}</h3>
+            <p>Open the interactive visualizer in a new tab to start learning.</p>
+          </div>
+          <div class="visualizer-launch-arrow">→</div>
+        </a>
       </div>
     </div>
   `;
